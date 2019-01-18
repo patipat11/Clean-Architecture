@@ -1,0 +1,65 @@
+PODS:
+  - Alamofire (4.8.0)
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - Natrium (6.3.0):
+    - Natrium/Swift (= 6.3.0)
+  - Natrium/Swift (6.3.0)
+  - Nimble (7.3.1)
+  - Result (4.1.0)
+  - RxAtomic (4.4.0)
+  - RxBlocking (4.4.0):
+    - RxAtomic (~> 4.4)
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
+  - RxTest (4.4.0):
+    - RxAtomic (~> 4.4)
+    - RxSwift (~> 4.0)
+  - SwiftLint (0.29.3)
+
+DEPENDENCIES:
+  - Moya
+  - Natrium
+  - Nimble
+  - RxBlocking
+  - RxCocoa
+  - RxSwift
+  - RxTest
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Moya
+    - Natrium
+    - Nimble
+    - Result
+    - RxAtomic
+    - RxBlocking
+    - RxCocoa
+    - RxSwift
+    - RxTest
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  Natrium: 816ff84a8b1b414d17baf6efbc7a05711073da2a
+  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxBlocking: 138ad53217434444d6eeeb4fb406a45431d92e31
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
+  SwiftLint: bfa7ca7b4d170cfaf0d236ca3ffd969e88a2f002
+
+PODFILE CHECKSUM: 454b8e84a9a60e04eba0fe184575d0965852810e
+
+COCOAPODS: 1.6.0.beta.2
