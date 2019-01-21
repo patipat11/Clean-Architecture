@@ -5,6 +5,8 @@ disabled_rules: # rule identifiers to exclude from running
   - identifier_name
   - line_length
   - vertical_whitespace
+  - trailing_whitespace
+  - empty_enum_arguments
 opt_in_rules: # some rules are only opt-in
   - empty_count
   # Find all the available rules by running:

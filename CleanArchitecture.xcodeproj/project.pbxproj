@@ -11,6 +11,18 @@
 		3567264224824AF3B1F0D565 /* Pods_NetworkLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD260738243F38EE9854BA4 /* Pods_NetworkLib.framework */; };
 		B78AB4FCCF3A32DC3D059777 /* Pods_CleanArchitecture_CleanArchitectureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35D1025567B573D7AEA8FA9 /* Pods_CleanArchitecture_CleanArchitectureUITests.framework */; };
 		C22D7D8BAAAA81A5E30719AA /* Pods_CleanArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4204EB4F5BF1DABE48860B4 /* Pods_CleanArchitecture.framework */; };
+		DD1425B321F58329002BE96B /* RickyAndMortyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1425B221F58329002BE96B /* RickyAndMortyUseCase.swift */; };
+		DD1425B521F58546002BE96B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1425B421F58546002BE96B /* Model.swift */; };
+		DD1425B721F58669002BE96B /* RickyAndMortyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1425B621F58669002BE96B /* RickyAndMortyResponse.swift */; };
+		DD1425B921F59426002BE96B /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1425B821F59426002BE96B /* Target.swift */; };
+		DD1425BB21F5999D002BE96B /* DomainLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE91EDB21F1790100726411 /* DomainLib.framework */; };
+		DD1425BD21F59ECC002BE96B /* RequestDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1425BC21F59ECC002BE96B /* RequestDataUseCase.swift */; };
+		DD1425BE21F5A46A002BE96B /* DomainLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE91EDB21F1790100726411 /* DomainLib.framework */; };
+		DD1425BF21F5A46A002BE96B /* NetworkLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE91EED21F1791100726411 /* NetworkLib.framework */; };
+		DD1425C121F5A608002BE96B /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1425C021F5A608002BE96B /* UseCaseProvider.swift */; };
+		DD1425C321F5A67A002BE96B /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1425C221F5A67A002BE96B /* Domain.swift */; };
+		DD1425C521F5A763002BE96B /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1425C421F5A763002BE96B /* Provider.swift */; };
+		DD1425C721F5CE33002BE96B /* GetParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1425C621F5CE33002BE96B /* GetParameters.swift */; };
 		DDE91EB421F178CF00726411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE91EB321F178CF00726411 /* AppDelegate.swift */; };
 		DDE91EB621F178CF00726411 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE91EB521F178CF00726411 /* ViewController.swift */; };
 		DDE91EB921F178CF00726411 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE91EB721F178CF00726411 /* Main.storyboard */; };
@@ -101,6 +113,15 @@
 		B7E7AF279157D18220EFD781 /* Pods-CleanArchitecture-CleanArchitectureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitecture-CleanArchitectureTests.debug.xcconfig"; path = "Target Support Files/Pods-CleanArchitecture-CleanArchitectureTests/Pods-CleanArchitecture-CleanArchitectureTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C35D1025567B573D7AEA8FA9 /* Pods_CleanArchitecture_CleanArchitectureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitecture_CleanArchitectureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE56FBEF9299C3861886EF4 /* Pods-CleanArchitecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitecture.debug.xcconfig"; path = "Target Support Files/Pods-CleanArchitecture/Pods-CleanArchitecture.debug.xcconfig"; sourceTree = "<group>"; };
+		DD1425B221F58329002BE96B /* RickyAndMortyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyAndMortyUseCase.swift; sourceTree = "<group>"; };
+		DD1425B421F58546002BE96B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DD1425B621F58669002BE96B /* RickyAndMortyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyAndMortyResponse.swift; sourceTree = "<group>"; };
+		DD1425B821F59426002BE96B /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		DD1425BC21F59ECC002BE96B /* RequestDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDataUseCase.swift; sourceTree = "<group>"; };
+		DD1425C021F5A608002BE96B /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		DD1425C221F5A67A002BE96B /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		DD1425C421F5A763002BE96B /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		DD1425C621F5CE33002BE96B /* GetParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetParameters.swift; sourceTree = "<group>"; };
 		DDE91EB021F178CF00726411 /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE91EB321F178CF00726411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDE91EB521F178CF00726411 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1425BB21F5999D002BE96B /* DomainLib.framework in Frameworks */,
 				3567264224824AF3B1F0D565 /* Pods_NetworkLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +192,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1425BE21F5A46A002BE96B /* DomainLib.framework in Frameworks */,
+				DD1425BF21F5A46A002BE96B /* NetworkLib.framework in Frameworks */,
 				F3C64AC75DCD7BF36E7E2DC7 /* Pods_PlatformLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +239,36 @@
 				A1EE69700A82E270F832E679 /* Pods-PlatformLib.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD1425AF21F5828E002BE96B /* class */ = {
+			isa = PBXGroup;
+			children = (
+				DD1425B221F58329002BE96B /* RickyAndMortyUseCase.swift */,
+				DD1425B421F58546002BE96B /* Model.swift */,
+				DD1425B621F58669002BE96B /* RickyAndMortyResponse.swift */,
+				DD1425C221F5A67A002BE96B /* Domain.swift */,
+				DD1425C621F5CE33002BE96B /* GetParameters.swift */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		DD1425B021F5829A002BE96B /* class */ = {
+			isa = PBXGroup;
+			children = (
+				DD1425B821F59426002BE96B /* Target.swift */,
+				DD1425C421F5A763002BE96B /* Provider.swift */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		DD1425B121F582A0002BE96B /* class */ = {
+			isa = PBXGroup;
+			children = (
+				DD1425BC21F59ECC002BE96B /* RequestDataUseCase.swift */,
+				DD1425C021F5A608002BE96B /* UseCaseProvider.swift */,
+			);
+			path = class;
 			sourceTree = "<group>";
 		};
 		DDE91EA721F178CF00726411 = {
@@ -271,6 +325,7 @@
 		DDE91EDC21F1790100726411 /* DomainLib */ = {
 			isa = PBXGroup;
 			children = (
+				DD1425AF21F5828E002BE96B /* class */,
 				DDE91EDD21F1790100726411 /* DomainLib.h */,
 				DDE91EDE21F1790100726411 /* Info.plist */,
 			);
@@ -280,6 +335,7 @@
 		DDE91EEE21F1791100726411 /* NetworkLib */ = {
 			isa = PBXGroup;
 			children = (
+				DD1425B021F5829A002BE96B /* class */,
 				DDE91EEF21F1791100726411 /* NetworkLib.h */,
 				DDE91EF021F1791100726411 /* Info.plist */,
 			);
@@ -289,6 +345,7 @@
 		DDE91EFF21F1792900726411 /* PlatformLib */ = {
 			isa = PBXGroup;
 			children = (
+				DD1425B121F582A0002BE96B /* class */,
 				DDE91F0021F1792900726411 /* PlatformLib.h */,
 				DDE91F0121F1792900726411 /* Info.plist */,
 			);
@@ -474,12 +531,15 @@
 					};
 					DDE91EDA21F1790100726411 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					DDE91EEC21F1791100726411 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					DDE91EFD21F1792900726411 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					DDE91F0D21F1794900726411 = {
 						CreatedOnToolsVersion = 10.1;
@@ -841,6 +901,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1425B321F58329002BE96B /* RickyAndMortyUseCase.swift in Sources */,
+				DD1425B721F58669002BE96B /* RickyAndMortyResponse.swift in Sources */,
+				DD1425B521F58546002BE96B /* Model.swift in Sources */,
+				DD1425C321F5A67A002BE96B /* Domain.swift in Sources */,
+				DD1425C721F5CE33002BE96B /* GetParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,6 +913,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1425C521F5A763002BE96B /* Provider.swift in Sources */,
+				DD1425B921F59426002BE96B /* Target.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,6 +922,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1425C121F5A608002BE96B /* UseCaseProvider.swift in Sources */,
+				DD1425BD21F59ECC002BE96B /* RequestDataUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1120,6 +1189,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FE01DB18CD4B2DD9FEA03965 /* Pods-DomainLib.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1139,6 +1209,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativeme.test.DomainLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1150,6 +1221,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB19B51E1635EE5ACFC6D348 /* Pods-DomainLib.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1180,6 +1252,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2B2E4313A40E0A55F2177052 /* Pods-NetworkLib.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1199,6 +1272,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativeme.test.NetworkLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1210,6 +1284,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A4864ECDC7E32A45B30C1D6 /* Pods-NetworkLib.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1240,6 +1315,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B8D180B84B4BA0E42E8C06D /* Pods-PlatformLib.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1259,6 +1335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativeme.test.PlatformLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1270,6 +1347,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A1EE69700A82E270F832E679 /* Pods-PlatformLib.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
