@@ -243,6 +243,7 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+<<<<<<< .merge_file_nDnR8n
 		BC4FBF6921F589280075D09E /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,8 +251,7 @@
 				BC4FBF6B21F58B280075D09E /* ActorTableViewCell.xib */,
 			);
 			path = TableViewCell;
-			sourceTree = "<group>";
-		};
+=======
 		DD1425AF21F5828E002BE96B /* class */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +280,7 @@
 				DD1425C021F5A608002BE96B /* UseCaseProvider.swift */,
 			);
 			path = class;
+>>>>>>> .merge_file_N771zA
 			sourceTree = "<group>";
 		};
 		DDE91EA721F178CF00726411 = {
