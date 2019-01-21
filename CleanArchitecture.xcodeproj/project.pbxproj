@@ -10,11 +10,12 @@
 		03AFA3E08961D51308D5AA90 /* Pods_DomainLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA222980779167DDF6E35698 /* Pods_DomainLib.framework */; };
 		3567264224824AF3B1F0D565 /* Pods_NetworkLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD260738243F38EE9854BA4 /* Pods_NetworkLib.framework */; };
 		B78AB4FCCF3A32DC3D059777 /* Pods_CleanArchitecture_CleanArchitectureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35D1025567B573D7AEA8FA9 /* Pods_CleanArchitecture_CleanArchitectureUITests.framework */; };
+		BC4FBF6C21F58B280075D09E /* ActorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4FBF6A21F58B280075D09E /* ActorTableViewCell.swift */; };
+		BC4FBF6D21F58B280075D09E /* ActorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4FBF6B21F58B280075D09E /* ActorTableViewCell.xib */; };
 		C22D7D8BAAAA81A5E30719AA /* Pods_CleanArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4204EB4F5BF1DABE48860B4 /* Pods_CleanArchitecture.framework */; };
 		DDE91EB421F178CF00726411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE91EB321F178CF00726411 /* AppDelegate.swift */; };
 		DDE91EB621F178CF00726411 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE91EB521F178CF00726411 /* ViewController.swift */; };
 		DDE91EB921F178CF00726411 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE91EB721F178CF00726411 /* Main.storyboard */; };
-		DDE91EBC21F178CF00726411 /* CleanArchitecture.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDE91EBA21F178CF00726411 /* CleanArchitecture.xcdatamodeld */; };
 		DDE91EBE21F178D000726411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE91EBD21F178D000726411 /* Assets.xcassets */; };
 		DDE91EC121F178D000726411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE91EBF21F178D000726411 /* LaunchScreen.storyboard */; };
 		DDE91ECC21F178D000726411 /* CleanArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE91ECB21F178D000726411 /* CleanArchitectureUITests.swift */; };
@@ -99,13 +100,14 @@
 		B4204EB4F5BF1DABE48860B4 /* Pods_CleanArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B601B04F6AD7247B23162CB8 /* Pods_PlatformLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E7AF279157D18220EFD781 /* Pods-CleanArchitecture-CleanArchitectureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitecture-CleanArchitectureTests.debug.xcconfig"; path = "Target Support Files/Pods-CleanArchitecture-CleanArchitectureTests/Pods-CleanArchitecture-CleanArchitectureTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC4FBF6A21F58B280075D09E /* ActorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTableViewCell.swift; sourceTree = "<group>"; };
+		BC4FBF6B21F58B280075D09E /* ActorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActorTableViewCell.xib; sourceTree = "<group>"; };
 		C35D1025567B573D7AEA8FA9 /* Pods_CleanArchitecture_CleanArchitectureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitecture_CleanArchitectureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE56FBEF9299C3861886EF4 /* Pods-CleanArchitecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitecture.debug.xcconfig"; path = "Target Support Files/Pods-CleanArchitecture/Pods-CleanArchitecture.debug.xcconfig"; sourceTree = "<group>"; };
 		DDE91EB021F178CF00726411 /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE91EB321F178CF00726411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDE91EB521F178CF00726411 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDE91EB821F178CF00726411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DDE91EBB21F178CF00726411 /* CleanArchitecture.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CleanArchitecture.xcdatamodel; sourceTree = "<group>"; };
 		DDE91EBD21F178D000726411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDE91EC021F178D000726411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDE91EC221F178D000726411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -217,6 +219,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BC4FBF6921F589280075D09E /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BC4FBF6A21F58B280075D09E /* ActorTableViewCell.swift */,
+				BC4FBF6B21F58B280075D09E /* ActorTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		DDE91EA721F178CF00726411 = {
 			isa = PBXGroup;
 			children = (
@@ -248,13 +259,13 @@
 		DDE91EB221F178CF00726411 /* CleanArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				BC4FBF6921F589280075D09E /* TableViewCell */,
 				DDE91EB321F178CF00726411 /* AppDelegate.swift */,
 				DDE91EB521F178CF00726411 /* ViewController.swift */,
 				DDE91EB721F178CF00726411 /* Main.storyboard */,
 				DDE91EBD21F178D000726411 /* Assets.xcassets */,
 				DDE91EBF21F178D000726411 /* LaunchScreen.storyboard */,
 				DDE91EC221F178D000726411 /* Info.plist */,
-				DDE91EBA21F178CF00726411 /* CleanArchitecture.xcdatamodeld */,
 			);
 			path = CleanArchitecture;
 			sourceTree = "<group>";
@@ -517,6 +528,7 @@
 			files = (
 				DDE91EC121F178D000726411 /* LaunchScreen.storyboard in Resources */,
 				DDE91EBE21F178D000726411 /* Assets.xcassets in Resources */,
+				BC4FBF6D21F58B280075D09E /* ActorTableViewCell.xib in Resources */,
 				DDE91EB921F178CF00726411 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -823,7 +835,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDE91EBC21F178CF00726411 /* CleanArchitecture.xcdatamodeld in Sources */,
+				BC4FBF6C21F58B280075D09E /* ActorTableViewCell.swift in Sources */,
 				DDE91EB621F178CF00726411 /* ViewController.swift in Sources */,
 				DDE91EB421F178CF00726411 /* AppDelegate.swift in Sources */,
 			);
@@ -1405,19 +1417,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DDE91EBA21F178CF00726411 /* CleanArchitecture.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DDE91EBB21F178CF00726411 /* CleanArchitecture.xcdatamodel */,
-			);
-			currentVersion = DDE91EBB21F178CF00726411 /* CleanArchitecture.xcdatamodel */;
-			path = CleanArchitecture.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DDE91EA821F178CF00726411 /* Project object */;
 }
