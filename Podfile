@@ -9,6 +9,7 @@ end
 def lib_on_app
 	pod 'Natrium'
 	pod 'SwiftLint'
+  pod 'MBProgressHUD'
 end
 
 def lib_on_framework

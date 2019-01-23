@@ -15,12 +15,14 @@ public enum Target: TargetType {
 	}
 	
 	public var path: String {
-		switch self {
-		case .loadData(let firstSearch):
-				return "/api/character/"
-		case .nextData(let nextSearch): return (nextSearch.nextURL?.url?.path)!
-		}
-	}
+    switch self {
+    case .loadData(let firstSearch):
+      return "/api/character/"
+    case .nextData(let nextSearch):
+      return (nextSearch.nextURL?.url?.path)!
+    }
+  }
+  
 	public var method: Moya.Method {
 		return .get
 	}

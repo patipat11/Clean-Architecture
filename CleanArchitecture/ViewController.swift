@@ -4,9 +4,15 @@ import PlatformLib
 import RxSwift
 import RxCocoa
 import AlamofireImage
+import MBProgressHUD
 
+protocol ViewControllerDelagate {
+  func show()
+  func hide()
+}
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ViewControllerDelagate {
+  
   var response: RickyAndMortyResponse? = nil
   var nextURL: String?
   let usecase = UseCaseProvider()
@@ -15,6 +21,7 @@ class ViewController: UIViewController {
   var viewModel = ViewModel()
   var timer: Timer?
   var actorModel: [ActorModel]?
+  var isLoading = false
   
   @IBOutlet weak var searchTextField: UITextField!
   @IBOutlet weak var backgroundTextFieldView: UIView!
@@ -24,47 +31,64 @@ class ViewController: UIViewController {
       listActorTableView.dataSource = self
     }
   }
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
-//    getDataActor(KeywordName(name: ""))
-    
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    viewModel.viewcontroller = self
     searchTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-    
+    listActorTableView.register(UINib(nibName: "ActorTableViewCell", bundle: nil), forCellReuseIdentifier: nameNibTableViewCell)
+    firstLoadActor()
+    setDisplay()
+  }
+  
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return UIStatusBarStyle.lightContent
+  }
+  
+  func show() {
+    self.isLoading = true
+    MBProgressHUD.showAdded(to: self.view, animated: true)
+  }
+  
+  func hide() {
+    self.isLoading = false
+    MBProgressHUD.hide(for: self.view, animated: true)
+  }
+  
+  func setDisplay() {
+    backgroundTextFieldView.layer.cornerRadius = 18.0
+    navigationItem.title = "Lessons"
+  }
+  
+  func firstLoadActor() {
     viewModel.getDataActor(KeywordName(name: ""), callback: { (actorModel) in
       self.actorModel = actorModel
       self.listActorTableView.reloadData()
       
     })
-    navigationItem.title = "Lessons"
-    backgroundTextFieldView.layer.cornerRadius = 18.0
-    listActorTableView.register(UINib(nibName: "ActorTableViewCell", bundle: nil), forCellReuseIdentifier: nameNibTableViewCell)
-	}
-  func secondCallTest() {
-    
+  }
+  
+  func loadMore() {
     viewModel.secondCall { (actorModel, info) in
       self.actorModel = actorModel
       self.listActorTableView.reloadData()
-      self.title = "\(info.currentPage)/\(info.totalPage)"
+      self.title = "\(info.currentPage!)/\(info.totalPage!)"
     }
-  }
-  override var preferredStatusBarStyle: UIStatusBarStyle {
-    return UIStatusBarStyle.lightContent
   }
   
   func getData(name: String) {
-    navigationItem.title = "Lessons"
+
     viewModel.getDataActor(KeywordName(name: name), callback: { (actorModel) in
       self.actorModel = actorModel
       self.listActorTableView.reloadData()
     })
   }
-  
-
 }
+
 extension ViewController {
   
   @objc func textFieldDidChange(textField: UITextField){
+    navigationItem.title = "Lessons"
     timer?.invalidate()
     timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (timer) in
       self.actorModel?.removeAll()
@@ -72,20 +96,17 @@ extension ViewController {
       self.getData(name: textField.text ?? "")
     }
   }
- 
-  
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.actorModel?.count ?? 0
   }
-
+  
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
     let cell = tableView.dequeueReusableCell(withIdentifier: nameNibTableViewCell, for: indexPath) as! ActorTableViewCell
     let imageURL = URL(string: (self.actorModel?[indexPath.row].image)!)
-//    let dataImage = NSData(contentsOf: imageURL as! URL)
+    //    let dataImage = NSData(contentsOf: imageURL as! URL)
     
     cell.setDataInCell((self.actorModel?[indexPath.row].name ?? ""),
                        (self.actorModel?[indexPath.row].status ?? ""),
@@ -93,18 +114,22 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     return cell
   }
-
+  
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 95
-
+    
   }
+  
   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    guard let actorCount = actorModel?.count else {
-      return
-    }
-    if indexPath.row > actorCount - 2 {
-      self.secondCallTest()
+    
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
       
+      guard let actorCount = self.actorModel?.count else {
+        return
+      }
+      if indexPath.row == actorCount - 1 && self.isLoading == false {
+        self.loadMore()
+      }
     }
   }
 }
