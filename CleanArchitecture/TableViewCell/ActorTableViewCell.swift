@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ActorTableViewCell: UITableViewCell {
   
@@ -15,7 +16,8 @@ class ActorTableViewCell: UITableViewCell {
   @IBOutlet weak var actorImage: UIImageView!
   @IBOutlet weak var nameActoinLable: UILabel!
   @IBOutlet weak var detailActor: UILabel!
-
+  @IBOutlet weak var imageActor: UIImageView!
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     backgroundImage.layer.cornerRadius = 40
@@ -25,12 +27,13 @@ class ActorTableViewCell: UITableViewCell {
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
     
-    // Configure the view for the selected state
   }
   
-  func setDataInCell( _ name: String, _ detail: String) {
+  func setDataInCell( _ name: String, _ detail: String, image: URL) {
     self.nameActoinLable.text = name
     self.detailActor.text = detail
+    actorImage.af_setImage(withURL: image)
+  //self.imageActor.image = UIImage(data: image as Data)
   }
   
 }

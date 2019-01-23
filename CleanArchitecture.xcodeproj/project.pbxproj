@@ -10,8 +10,11 @@
 		03AFA3E08961D51308D5AA90 /* Pods_DomainLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA222980779167DDF6E35698 /* Pods_DomainLib.framework */; };
 		3567264224824AF3B1F0D565 /* Pods_NetworkLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD260738243F38EE9854BA4 /* Pods_NetworkLib.framework */; };
 		B78AB4FCCF3A32DC3D059777 /* Pods_CleanArchitecture_CleanArchitectureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35D1025567B573D7AEA8FA9 /* Pods_CleanArchitecture_CleanArchitectureUITests.framework */; };
+		BC47C0F321F8529200805BDD /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC47C0F221F8529200805BDD /* InfoModel.swift */; };
 		BC4FBF6C21F58B280075D09E /* ActorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4FBF6A21F58B280075D09E /* ActorTableViewCell.swift */; };
 		BC4FBF6D21F58B280075D09E /* ActorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4FBF6B21F58B280075D09E /* ActorTableViewCell.xib */; };
+		BC4FBF6F21F6C2160075D09E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4FBF6E21F6C2160075D09E /* ViewModel.swift */; };
+		BC4FBF7121F812DA0075D09E /* ActorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4FBF7021F812DA0075D09E /* ActorModel.swift */; };
 		C22D7D8BAAAA81A5E30719AA /* Pods_CleanArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4204EB4F5BF1DABE48860B4 /* Pods_CleanArchitecture.framework */; };
 		DD1425B321F58329002BE96B /* RickyAndMortyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1425B221F58329002BE96B /* RickyAndMortyUseCase.swift */; };
 		DD1425B521F58546002BE96B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1425B421F58546002BE96B /* Model.swift */; };
@@ -112,8 +115,11 @@
 		B4204EB4F5BF1DABE48860B4 /* Pods_CleanArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B601B04F6AD7247B23162CB8 /* Pods_PlatformLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E7AF279157D18220EFD781 /* Pods-CleanArchitecture-CleanArchitectureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitecture-CleanArchitectureTests.debug.xcconfig"; path = "Target Support Files/Pods-CleanArchitecture-CleanArchitectureTests/Pods-CleanArchitecture-CleanArchitectureTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC47C0F221F8529200805BDD /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
 		BC4FBF6A21F58B280075D09E /* ActorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTableViewCell.swift; sourceTree = "<group>"; };
 		BC4FBF6B21F58B280075D09E /* ActorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActorTableViewCell.xib; sourceTree = "<group>"; };
+		BC4FBF6E21F6C2160075D09E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BC4FBF7021F812DA0075D09E /* ActorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorModel.swift; sourceTree = "<group>"; };
 		C35D1025567B573D7AEA8FA9 /* Pods_CleanArchitecture_CleanArchitectureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanArchitecture_CleanArchitectureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE56FBEF9299C3861886EF4 /* Pods-CleanArchitecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitecture.debug.xcconfig"; path = "Target Support Files/Pods-CleanArchitecture/Pods-CleanArchitecture.debug.xcconfig"; sourceTree = "<group>"; };
 		DD1425B221F58329002BE96B /* RickyAndMortyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyAndMortyUseCase.swift; sourceTree = "<group>"; };
@@ -252,6 +258,15 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		BC4FBF7221F812E30075D09E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC4FBF7021F812DA0075D09E /* ActorModel.swift */,
+				BC47C0F221F8529200805BDD /* InfoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DD1425AF21F5828E002BE96B /* class */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,8 +329,10 @@
 			isa = PBXGroup;
 			children = (
 				BC4FBF6921F589280075D09E /* TableViewCell */,
+				BC4FBF7221F812E30075D09E /* Model */,
 				DDE91EB321F178CF00726411 /* AppDelegate.swift */,
 				DDE91EB521F178CF00726411 /* ViewController.swift */,
+				BC4FBF6E21F6C2160075D09E /* ViewModel.swift */,
 				DDE91EB721F178CF00726411 /* Main.storyboard */,
 				DDE91EBD21F178D000726411 /* Assets.xcassets */,
 				DDE91EBF21F178D000726411 /* LaunchScreen.storyboard */,
@@ -641,6 +658,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CleanArchitecture/Pods-CleanArchitecture-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
@@ -652,6 +670,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
@@ -717,6 +736,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CleanArchitecture-CleanArchitectureUITests/Pods-CleanArchitecture-CleanArchitectureUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
@@ -731,6 +751,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
@@ -821,6 +842,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CleanArchitecture-CleanArchitectureTests/Pods-CleanArchitecture-CleanArchitectureTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
@@ -835,6 +857,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
@@ -897,7 +920,10 @@
 			files = (
 				BC4FBF6C21F58B280075D09E /* ActorTableViewCell.swift in Sources */,
 				DDE91EB621F178CF00726411 /* ViewController.swift in Sources */,
+				BC4FBF6F21F6C2160075D09E /* ViewModel.swift in Sources */,
 				DDE91EB421F178CF00726411 /* AppDelegate.swift in Sources */,
+				BC4FBF7121F812DA0075D09E /* ActorModel.swift in Sources */,
+				BC47C0F321F8529200805BDD /* InfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,11 +17,7 @@ public enum Target: TargetType {
 	public var path: String {
 		switch self {
 		case .loadData(let firstSearch):
-			if let name = firstSearch.keywordName?.name {
 				return "/api/character/"
-			} else {
-				return "/api/character/"
-			}
 		case .nextData(let nextSearch): return (nextSearch.nextURL?.url?.path)!
 		}
 	}
@@ -33,7 +29,7 @@ public enum Target: TargetType {
 	public var task: Task {
 		switch self {
 		case .loadData(let firstSearch):
-			if let name = firstSearch.keywordName?.name {
+			if let name = firstSearch.keywordName?.name, !name.isEmpty {
 				let params: [String: Any] = ["name": name]
 				return .requestParameters(parameters: params, encoding: URLEncoding(destination: .queryString))
 			} else {

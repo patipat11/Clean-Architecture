@@ -13,6 +13,7 @@ end
 
 def lib_on_framework
 	pod 'Moya'
+  pod 'AlamofireImage'
 	pod 'SwiftLint'
 end
 

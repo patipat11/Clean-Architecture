@@ -1,12 +1,20 @@
 import UIKit
 import DomainLib
 import PlatformLib
+import RxSwift
+import RxCocoa
+import AlamofireImage
+
 
 class ViewController: UIViewController {
-  var res: RickyAndMortyResponse? = nil
+  var response: RickyAndMortyResponse? = nil
   var nextURL: String?
   let usecase = UseCaseProvider()
-  
+  let nameNibTableViewCell = "ActorTableViewCell"
+  var results: [Result] = []
+  var viewModel = ViewModel()
+  var timer: Timer?
+  var actorModel: [ActorModel]?
   
   @IBOutlet weak var searchTextField: UITextField!
   @IBOutlet weak var backgroundTextFieldView: UIView!
@@ -17,40 +25,72 @@ class ViewController: UIViewController {
     }
   }
 
-  let nameNibTableViewCell = "ActorTableViewCell"
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+//    getDataActor(KeywordName(name: ""))
+    
+    searchTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+    
+    viewModel.getDataActor(KeywordName(name: ""), callback: { (actorModel) in
+      self.actorModel = actorModel
+      self.listActorTableView.reloadData()
+      
+    })
     navigationItem.title = "Lessons"
-    firstCall()
-	}
-  
-  override func viewWillAppear(_ animated: Bool) {
-    createLayout()
-  }
-
-  func createLayout() {
     backgroundTextFieldView.layer.cornerRadius = 18.0
-    UIApplication.shared.statusBarStyle = .lightContent
-    preferredStatusBarStyle
+    listActorTableView.register(UINib(nibName: "ActorTableViewCell", bundle: nil), forCellReuseIdentifier: nameNibTableViewCell)
+	}
+  func secondCallTest() {
+    
+    viewModel.secondCall { (actorModel, info) in
+      self.actorModel = actorModel
+      self.listActorTableView.reloadData()
+      self.title = "\(info.currentPage)/\(info.totalPage)"
+    }
   }
-  
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return UIStatusBarStyle.lightContent
   }
+  
+  func getData(name: String) {
+    navigationItem.title = "Lessons"
+    viewModel.getDataActor(KeywordName(name: name), callback: { (actorModel) in
+      self.actorModel = actorModel
+      self.listActorTableView.reloadData()
+    })
+  }
+  
+
+}
+extension ViewController {
+  
+  @objc func textFieldDidChange(textField: UITextField){
+    timer?.invalidate()
+    timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (timer) in
+      self.actorModel?.removeAll()
+      self.listActorTableView.reloadData()
+      self.getData(name: textField.text ?? "")
+    }
+  }
+ 
+  
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    return self.actorModel?.count ?? 0
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//    let cell = listActorTableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomTableViewCell
-
-    let cell = Bundle.main.loadNibNamed(nameNibTableViewCell, owner: self, options: nil)?.first as! ActorTableViewCell
-    cell.setDataInCell("titleName", "Hello SubProduct")
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: nameNibTableViewCell, for: indexPath) as! ActorTableViewCell
+    let imageURL = URL(string: (self.actorModel?[indexPath.row].image)!)
+//    let dataImage = NSData(contentsOf: imageURL as! URL)
+    
+    cell.setDataInCell((self.actorModel?[indexPath.row].name ?? ""),
+                       (self.actorModel?[indexPath.row].status ?? ""),
+                       image: imageURL!)
+    
     return cell
   }
 
@@ -58,27 +98,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     return 95
 
   }
-}
-extension ViewController {
-  
-  func firstCall() {
-    let key = KeywordName(name: "ri")
-    let keywordName = key
-    let firstSearch = FirstSearch(keywordName: keywordName)
-    usecase.makeRickyAndMortyUseCase().rickyAndMortyFirstLoadData(firstSearch: firstSearch) { (response) in
-      self.res = response
-      self.nextURL = self.res?.info.next
-      self.secondCall()
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    guard let actorCount = actorModel?.count else {
+      return
     }
-  }
-  
-  func secondCall() {
-    let nextURL = NextURL(urlString: self.nextURL!)
-    let nextSearch = NextSearch(nextURL: nextURL)
-    usecase.makeRickyAndMortyUseCase().rickyAndMortyLoadMore(nextSearch: nextSearch) { (response) in
-      self.res = response
-      self.nextURL = self.res?.info.next
+    if indexPath.row > actorCount - 2 {
+      self.secondCallTest()
+      
     }
-    
   }
 }
