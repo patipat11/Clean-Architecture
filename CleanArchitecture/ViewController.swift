@@ -70,8 +70,15 @@ class ViewController: UIViewController, ViewControllerDelagate {
   
   func loadMore() {
     viewModel.secondCall { (actorModel, info) in
-      self.actorModel = actorModel
-      self.listActorTableView.reloadData()
+		self.listActorTableView.beginUpdates()
+		actorModel.forEach({ (model) in
+			self.actorModel?.append(model)
+				self.listActorTableView.insertRows(at: [IndexPath.init(row: (self.actorModel?.count)!-1, section: 0)], with: .automatic)
+		})
+		self.listActorTableView.endUpdates()
+		
+		
+      //self.listActorTableView.reloadData()
       self.title = "\(info.currentPage!)/\(info.totalPage!)"
     }
   }
@@ -87,10 +94,10 @@ class ViewController: UIViewController, ViewControllerDelagate {
 
 extension ViewController {
   
-  @objc func textFieldDidChange(textField: UITextField){
+  @objc func textFieldDidChange(textField: UITextField) {
     navigationItem.title = "Lessons"
     timer?.invalidate()
-    timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (timer) in
+    timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
       self.actorModel?.removeAll()
       self.listActorTableView.reloadData()
       self.getData(name: textField.text ?? "")
@@ -104,15 +111,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: nameNibTableViewCell, for: indexPath) as! ActorTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: nameNibTableViewCell, for: indexPath) as? ActorTableViewCell
     let imageURL = URL(string: (self.actorModel?[indexPath.row].image)!)
     //    let dataImage = NSData(contentsOf: imageURL as! URL)
     
-    cell.setDataInCell((self.actorModel?[indexPath.row].name ?? ""),
+    cell?.setDataInCell((self.actorModel?[indexPath.row].name ?? ""),
                        (self.actorModel?[indexPath.row].status ?? ""),
                        image: imageURL!)
     
-    return cell
+	return cell ?? UITableViewCell()
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -56,14 +56,13 @@ class ViewModel: HomeViewModel {
       self.info = self.response?.info
       self.results = resulst
       self.infoModel = InfoModel(currentPage: self.currentPage,totalPage: self.info?.pages)
-//      self.InfoModel = InfoModel(
-
+		var actorModel = [ActorModel]()
       self.results.forEach({ (results) in
         let actor = ActorModel(results.name, results.status, results.image)
-        self.actorModel.append(actor)
+		actorModel.append(actor)
       })
       self.viewcontroller?.hide()
-      callback(self.actorModel, self.infoModel!)
+      callback(actorModel, self.infoModel!)
     }
   }
 }

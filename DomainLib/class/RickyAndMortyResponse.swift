@@ -57,5 +57,3 @@ public struct Location: Codable {
 		self.url = url
 	}
 }
-
-

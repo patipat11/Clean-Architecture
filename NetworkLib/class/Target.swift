@@ -16,7 +16,7 @@ public enum Target: TargetType {
 	
 	public var path: String {
     switch self {
-    case .loadData(let firstSearch):
+    case .loadData(_):
       return "/api/character/"
     case .nextData(let nextSearch):
       return (nextSearch.nextURL?.url?.path)!
